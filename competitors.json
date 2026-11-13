@@ -1,0 +1,54 @@
+[
+  {
+    "id": "browserbase",
+    "name": "Browserbase",
+    "pricingUrl": "https://www.browserbase.com/pricing"
+  },
+  {
+    "id": "browser-use",
+    "name": "Browser Use",
+    "pricingUrl": "https://browser-use.com/pricing"
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "pricingUrl": "https://www.firecrawl.dev/pricing"
+  },
+  {
+    "id": "apify",
+    "name": "Apify",
+    "pricingUrl": "https://apify.com/pricing"
+  },
+  {
+    "id": "bright-data",
+    "name": "Bright Data",
+    "pricingUrl": "https://brightdata.com/pricing/scraping-browser",
+    "notes": "Scraping Browser pricing. That is the Bright Data product closest to TinyFish."
+  },
+  {
+    "id": "steel",
+    "name": "Steel",
+    "pricingUrl": "https://steel.dev/pricing"
+  },
+  {
+    "id": "hyperbrowser",
+    "name": "Hyperbrowser",
+    "pricingUrl": "https://www.hyperbrowser.ai/pricing"
+  },
+  {
+    "id": "anchor",
+    "name": "Anchor Browser",
+    "pricingUrl": "https://docs.anchorbrowser.io/pricing",
+    "notes": "Pricing lives on the docs site."
+  },
+  {
+    "id": "exa",
+    "name": "Exa",
+    "pricingUrl": "https://exa.ai/pricing"
+  },
+  {
+    "id": "parallel",
+    "name": "Parallel",
+    "pricingUrl": "https://parallel.ai/pricing"
+  }
+]
