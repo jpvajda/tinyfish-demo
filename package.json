@@ -1,0 +1,13 @@
+{
+  "name": "tinyfish-pricing-tracker",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "node --env-file=.env src/server.js",
+    "setup": "node --env-file=.env scripts/setup.js",
+    "teardown": "node --env-file=.env scripts/teardown.js"
+  }
+}
