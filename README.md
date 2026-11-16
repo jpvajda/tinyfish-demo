@@ -2,6 +2,14 @@
 
 Tracks TinyFish competitor pricing pages. A setup script stores a snapshot and creates one daily Page Monitor per competitor. The dashboard shows the current plans and a change feed.
 
+## Example
+
+This is a snapshot of [Browser Use's](https://browser-use.com/pricing) pricing page on `Nov 13, 2026, 9:16:17 AM`
+
+![Browser Use plans on the dashboard: price, billing unit, limits, and free tier](images/example-competitor.png)
+
+![A Browser Use price change: removed lines in red, added lines in green](images/diffs.png)
+
 ## Install
 
 Requires Node 22.13 or newer and pnpm.

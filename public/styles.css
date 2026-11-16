@@ -179,3 +179,30 @@ pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 12px;
 }
+
+pre.diff {
+  padding: 0;
+  background: #fff;
+  border: 1px solid #d0d7de;
+}
+
+.diff-line {
+  display: block;
+  padding: 0 8px;
+  min-height: 1.45em;
+}
+
+.diff-add {
+  background: #e6ffec;
+  color: #116329;
+}
+
+.diff-del {
+  background: #ffebe9;
+  color: #82071e;
+}
+
+.diff-meta {
+  background: #f6f8fa;
+  color: #57606a;
+}

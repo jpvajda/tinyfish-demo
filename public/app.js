@@ -197,11 +197,7 @@ function feedItem(event, name) {
     summary.textContent = event.summary;
     details.append(summary);
   }
-  if (event.diff) {
-    const diff = document.createElement("pre");
-    diff.textContent = event.diff;
-    details.append(diff);
-  }
+  if (event.diff) details.append(diffBlock(event.diff));
   item.append(details);
   return item;
 }
@@ -253,6 +249,30 @@ function latencyCell(entry) {
 function formatLatency(ms) {
   if (ms < 1000) return `${ms} ms`;
   return `${(ms / 1000).toFixed(1)} s`;
+}
+
+function diffBlock(text) {
+  const pre = document.createElement("pre");
+  pre.className = "diff";
+  let inBody = false;
+  for (const line of text.split("\n")) {
+    if (line.startsWith("@@")) inBody = true;
+    const kind = diffKind(line, inBody);
+    if (!inBody && (line.startsWith("+++ ") || line.startsWith("+++"))) inBody = true;
+    const row = document.createElement("span");
+    row.className = `diff-line diff-${kind}`;
+    row.textContent = line.length ? line : " ";
+    pre.append(row);
+  }
+  return pre;
+}
+
+function diffKind(line, inBody) {
+  if (line.startsWith("@@") || line.startsWith("diff ") || line.startsWith("index ")) return "meta";
+  if (!inBody && (line.startsWith("---") || line.startsWith("+++"))) return "meta";
+  if (line.startsWith("+")) return "add";
+  if (line.startsWith("-")) return "del";
+  return "ctx";
 }
 
 function labelOutcome(outcome) {
