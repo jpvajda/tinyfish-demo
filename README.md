@@ -28,9 +28,16 @@ TinyFish only posts webhooks for scheduled runs, and only to a public URL. Run n
 1. Start the app with `pnpm run dev`.
 2. In another terminal: `ngrok http 3000`
 3. Copy the `https://….ngrok-free.app` address from the Forwarding line into `PUBLIC_BASE_URL` in `.env`. No path and no trailing slash.
-4. Run `pnpm run setup`. If the monitors already exist, setup updates their webhook URL.
+4. Run `pnpm run setup` if needed.
 
-Leave ngrok running to receive the 8:00 AM Pacific delivery. That address changes each time you restart ngrok, so set `PUBLIC_BASE_URL` again and rerun setup. A live webhook cannot be forced from Run now.
+
+> Run pnpm run setup in these cases:
+
+1. Once, the first time, to create the monitors and the first snapshots.
+2. Again when the ngrok address in PUBLIC_BASE_URL changes.
+3. Again after you add a competitor.
+
+Leave ngrok running to receive the 8:00 AM Pacific delivery. That address changes each time you restart ngrok, so set `PUBLIC_BASE_URL` again and rerun setup. Also rerun setup after you add a competitor. A live webhook cannot be forced from Run now.
 
 ## Setup and teardown
 
